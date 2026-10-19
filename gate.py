@@ -33,7 +33,7 @@ RULES = [
 ]
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
-DEFAULT_ALLOW_EMAILS = {"hcac4735@agent.qq.com"}
+DEFAULT_ALLOW_EMAILS = {"ops@example.com"}
 DEFAULT_ALLOW_DOMAINS = {"example.com", "example.org", "example.net"}
 
 MAX_FILE_BYTES = 5 * 1024 * 1024

@@ -30,7 +30,7 @@ scanned 1 file(s), 4 finding(s)
 warning NET1  examples/docs/plan.md:16 10.12.3.8 — private-range IP address
 warning NET2  examples/docs/plan.md:15 corp.internal — internal hostname
 warning MAIL1 examples/docs/plan.md:15 zhangsan@corp.internal — email address not on allowlist
-warning CUST1 examples/docs/plan.md:15 海红面 — customer name mention
+warning CUST1 examples/docs/plan.md:15 Acme Foods — customer name mention
 ```
 
 </details>
