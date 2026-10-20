@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2026 chenhz01 — see LICENSE, LICENSE-SPEC and NOTICE
 """leak-gate — static rules that scan local documentation for
 internal information leaks: intranet addresses, credentialed URLs, secret-shaped
 strings, non-allowlisted emails, and optional customer-name mentions.
