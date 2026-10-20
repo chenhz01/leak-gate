@@ -165,7 +165,18 @@ def main(argv=None):
         print("error: cannot read list file: %s" % exc, file=sys.stderr)
         sys.exit(1)
 
+    # 指向不存在的路径时必须报错，不能静默「扫描了 0 个文件 → 通过」。
+    # 否则 CI 里路径写错一次，这个门就永远是绿的（2026-10-20 实测发现）。
+    missing = [p for p in args.paths if not os.path.exists(p)]
+    if missing:
+        print("error: path not found: %s" % ", ".join(missing), file=sys.stderr)
+        sys.exit(2)
+
     findings, n = scan_paths(args.paths, customers, allow_emails, allow_domains)
+    if n == 0:
+        print("error: nothing scanned in %s (no readable text files)"
+              % ", ".join(args.paths), file=sys.stderr)
+        sys.exit(2)
     _print(findings, n, args.json)
     sys.exit(1 if _has_error(findings) else 0)
 

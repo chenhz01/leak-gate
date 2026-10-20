@@ -51,7 +51,7 @@ Being explicit here is cheaper than a wrong expectation later.
 
 ## Exit codes
 
-`0` = no findings (or warnings only); `1` = at least one error-level leak.
+`0` = no **error-level** finding (warnings are printed but do not fail the run). `1` = at least one secret-level finding. `2` = a path does not exist, or nothing was scannable. **Warnings alone never fail the run; a mistyped path never passes silently.**
 
 ## Install
 
