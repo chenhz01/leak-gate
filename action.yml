@@ -1,5 +1,5 @@
 name: leak-gate
-description: Scan for internal detail before the doc leaves the building.
+description: Info leak scan: catch internal hostnames, private IPs, emails and customer names before a doc leaves the building.
 branding:
   icon: shield
   color: blue
